@@ -6,22 +6,24 @@ import {
 } from "react-router-dom";
 import GithubList from "./containers/GithubList";
 import GithubDetail from "./containers/GithubDetail";
-import Header from "./Navigation";
 import './App.css'
+import TopBar from "./containers/TopBar";
 
 export default function App() {
   return (
     <Router>
       <div className="Container">
-        <Header />
-        <Switch>
-          <Route path="/github_list/:user">
-            <GithubList />
-          </Route>
-          <Route path="/github_detail/:user/:repo">
-            <GithubDetail />
-          </Route>
-        </Switch>
+        <TopBar />
+        <div style={{ marginTop: '30px', marginLeft: '65px', marginRight: '65px' }}>
+          <Switch>
+            <Route path="/github_list/:user">
+              <GithubList />
+            </Route>
+            <Route path="/github_detail/:user/:repo">
+              <GithubDetail />
+            </Route>
+          </Switch>
+        </div>
       </div>
     </Router>
   );

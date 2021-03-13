@@ -23,7 +23,7 @@ export default function GithubList() {
     console.log(repos)
 
     return (
-        <div>
+        <div className="GithubList">
             Github repos of user: {user}
             <ListRepo repos={repos} />
         </div>

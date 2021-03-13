@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Input, InputGroup, InputGroupText } from "reactstrap";
-import TopBar from "../components/TopBar";
+import './SearchBar.css';
 
-export default function UserInput() {
+export default function SearchBar() {
   const history = useHistory();
   const [user, setUser] = useState('');
 
@@ -14,15 +14,15 @@ export default function UserInput() {
 
   const onSubmit = useCallback(() => {
     history.push(`/github_list/${user || 'none'}`);
+    setUser('');
   }, [history, user]);
 
   return (
-    <div>
-      <TopBar />
+    <div className="SearchBar">
       <form onSubmit={onSubmit}>
         <InputGroup onSubmit={onSubmit}>
-          <InputGroupText>Get list repo</InputGroupText>
-          <Input type="text" value={user} onChange={onChange} />
+          <InputGroupText>Get repo</InputGroupText>
+          <Input type="text" placeholder="Gituser" value={user} onChange={onChange} />
         </InputGroup>
       </form>
     </div>
