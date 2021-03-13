@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from 'axios';
 import { API } from "../Contants";
 import ListRepo from "../components/ListRepo";
+import ReactMarkdown from "react-markdown";
 
 export default function GithubDetail() {
     const { user, repo } = useParams();
@@ -24,6 +25,7 @@ export default function GithubDetail() {
         <div>
             Github readme: {user}
             {/* {readme} */}
+            <ReactMarkdown>{readme}</ReactMarkdown>
         </div>
     );
 }
