@@ -4,7 +4,7 @@ import './ListRepo.css';
 
 export default function ListRepo({ repos }) {
     return (
-        <div className="ListRepo">
+        <div>
             {(repos || []).map((repo) =>
                 <Repo key={repo.id} repo={repo} />
             )}

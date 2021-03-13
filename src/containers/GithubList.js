@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from 'axios';
 import { API } from "../Contants";
 import ListRepo from "../components/ListRepo";
+import UserRepo from "../components/UserRepo";
 
 export default function GithubList() {
     const { user } = useParams();
@@ -24,7 +25,7 @@ export default function GithubList() {
 
     return (
         <div className="GithubList">
-            Github repos of user: {user}
+            <UserRepo username={user} />
             <ListRepo repos={repos} />
         </div>
     );

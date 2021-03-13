@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from 'axios';
 import { API } from "../Contants";
 import ReactMarkdown from "react-markdown";
-import './GithubList.css';
+import UserRepo from "../components/UserRepo";
 
 export default function GithubDetail() {
     const { user, repo } = useParams();
@@ -26,11 +26,9 @@ export default function GithubDetail() {
         fetchReadMe();
     }, [fetchReadMe]);
 
-    console.log('aaa', readme)
-
     return (
         <div>
-            Github readme: {user}
+            <UserRepo username={user} />
             {readme === '' && 'There is not readme file'}
             {readme !== '' && <ReactMarkdown>{readme}</ReactMarkdown>}
         </div>
