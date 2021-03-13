@@ -26,4 +26,4 @@ Choose the repo you want to see Readme file
 
 ---
 
-![image](https://user-images.githubusercontent.com/37145185/111043102-5b221d80-8473-11eb-8235-7c58b1696467.png)
+![image](https://user-images.githubusercontent.com/37145185/111043154-9d4b5f00-8473-11eb-85b9-09baa5a45b89.png)
