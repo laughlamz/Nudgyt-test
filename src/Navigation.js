@@ -11,9 +11,6 @@ export default function Header() {
                     <li>
                         <Link to="/user_input">User Input</Link>
                     </li>
-                    <li>
-                        <Link to="/github_detail">Github detail</Link>
-                    </li>
                 </ul>
             </nav>
         </div>

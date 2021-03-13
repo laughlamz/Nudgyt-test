@@ -9,7 +9,7 @@ export default function GithubList() {
     const [repos, setRepos] = useState([]);
     // TODO handle none case
 
-    const fetchListRepoByUser = useCallback(async () => {
+    const fetchListRepo = useCallback(async () => {
         const { status, data } = await axios.get(API.LIST_REPO(user));
         if (status === 200) {
             setRepos(data);
@@ -17,8 +17,8 @@ export default function GithubList() {
     }, [user, setRepos])
 
     useEffect(() => {
-        fetchListRepoByUser();
-    }, [fetchListRepoByUser]);
+        fetchListRepo();
+    }, [fetchListRepo]);
 
     return (
         <div>

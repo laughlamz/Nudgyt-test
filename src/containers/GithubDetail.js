@@ -23,6 +23,7 @@ export default function GithubDetail() {
     return (
         <div>
             Github readme: {user}
+            {/* {readme} */}
         </div>
     );
 }
