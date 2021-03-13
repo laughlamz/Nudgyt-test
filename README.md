@@ -1,20 +1,18 @@
-# Getting Started with Create React App
+# Getting Started
 
-Nudgyt github data page test
+Nudgyt github data page interview test
 
-## Available Scripts
+## Scripts
 
 In the project directory, you can run:
 
 ### `yarn start`
 
-Runs the app
+Runs the app at [http://localhost:3000](http://localhost:3000)
 
-At [http://localhost:3000](http://localhost:3000)
+Enter the github-user that you want to find
 
-Enter the username that you want to find
-
-Choose the repo you want to see Readme file
+Choose the repo you want to see the Readme.md file
 
 ### Page
 
