@@ -22,7 +22,6 @@ export default function GithubDetail() {
     return (
         <div>
             Github readme: {user}
-            {/* {readme} */}
             <ReactMarkdown>{readme}</ReactMarkdown>
         </div>
     );
