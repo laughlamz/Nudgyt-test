@@ -1,0 +1,11 @@
+.WelcomeTitle, .WelcomeDescription {
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.WelcomeDescription {
+    font-size: 18px;
+    margin-top: 10px;
+}

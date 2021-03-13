@@ -8,6 +8,7 @@ import GithubList from "./containers/GithubList";
 import GithubDetail from "./containers/GithubDetail";
 import './App.css'
 import TopBar from "./containers/TopBar";
+import Welcome from "./components/Welcome";
 
 export default function App() {
   return (
@@ -16,6 +17,9 @@ export default function App() {
         <TopBar />
         <div className="Content">
           <Switch>
+            <Route exact path="/">
+              <Welcome />
+            </Route>
             <Route path="/github_list/:user">
               <GithubList />
             </Route>

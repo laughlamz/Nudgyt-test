@@ -6,7 +6,7 @@ export default function UserRepo({ username }) {
     return (
         <div className="UserRepo">
             <img className="GithubIcon" src={SvgGithub} alt="Github-icon" />
-            Github <b>{username}</b> repository
+            Github <b>{username.toLowerCase()}</b> repository
         </div>
     );
 }
