@@ -6,7 +6,9 @@ Nudgyt github data page interview test
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm install`
+
+### `npm start`
 
 Runs the app at [http://localhost:3000](http://localhost:3000)
 
