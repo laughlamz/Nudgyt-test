@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { Fragment, useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from 'axios';
 import { API } from "../Contants";
@@ -8,8 +8,10 @@ import UserRepo from "../components/UserRepo";
 export default function GithubDetail() {
     const { user, repo } = useParams();
     const [readme, setReadme] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const fetchReadMe = useCallback(async () => {
+        setLoading(true);
         try {
             const { status, data } = await axios.get(API.GET_README(user, repo));
             if (status === 200) {
@@ -17,9 +19,10 @@ export default function GithubDetail() {
             } else {
                 setReadme('');
             }
-        } catch(e) {
+        } catch (e) {
             setReadme('');
         }
+        setLoading(false);
     }, [repo, user])
 
     useEffect(() => {
@@ -29,8 +32,14 @@ export default function GithubDetail() {
     return (
         <div>
             <UserRepo username={user} />
-            {readme === '' && 'There is no readme file'}
-            {readme !== '' && <ReactMarkdown>{readme}</ReactMarkdown>}
+            {loading ? (
+                <div>LOADING</div>
+            ) : (
+                <Fragment>
+                    {readme === '' && 'There is no readme file'}
+                    {readme !== '' && <ReactMarkdown>{readme}</ReactMarkdown>}
+                </Fragment>
+            )}
         </div>
     );
 }
