@@ -29,7 +29,7 @@ export default function GithubDetail() {
     return (
         <div>
             <UserRepo username={user} />
-            {readme === '' && 'There is not readme file'}
+            {readme === '' && 'There is no readme file'}
             {readme !== '' && <ReactMarkdown>{readme}</ReactMarkdown>}
         </div>
     );
