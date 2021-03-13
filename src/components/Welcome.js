@@ -1,4 +1,5 @@
 import React from "react";
+import SvgGithub from '../Image/github.svg';
 import './Welcome.css';
 
 export default function Welcome({ username }) {
@@ -9,6 +10,9 @@ export default function Welcome({ username }) {
             </div>
             <div className="WelcomeDescription">
                 A simple page that help you search your github data quickly.
+            </div>
+            <div className="WelcomeIcon">
+                <img src={SvgGithub} style={{ height: 64 }} alt="Github-icon" />
             </div>
         </div>
     );
