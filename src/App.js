@@ -3,8 +3,10 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  useParams,
 } from "react-router-dom";
-import GituserInput from "./containers/GituserInput";
+import GithubList from "./containers/GithubList";
+import UserInput from "./containers/UserInput";
 import Header from "./Navigation";
 
 export default function App() {
@@ -13,10 +15,10 @@ export default function App() {
       <div>
         <Header />
         <Switch>
-          <Route path="/gituser_input">
-            <GituserInput />
+          <Route path="/user_input">
+            <UserInput />
           </Route>
-          <Route path="/github_list">
+          <Route path="/github_list/:user">
             <GithubList />
           </Route>
           <Route path="/github_detail">
@@ -26,10 +28,6 @@ export default function App() {
       </div>
     </Router>
   );
-}
-
-function GithubList() {
-  return <h2>About</h2>;
 }
 
 function GithubDetail() {
