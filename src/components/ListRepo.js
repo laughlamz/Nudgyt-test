@@ -6,7 +6,7 @@ export default function ListRepo({ repos }) {
         <div>
             <b>List</b>
             {(repos || []).map((repo) =>
-                <Repo repo={repo} />
+                <Repo key={repo.id} repo={repo} />
             )}
         </div>
     );

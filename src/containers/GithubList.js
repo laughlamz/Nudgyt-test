@@ -20,6 +20,8 @@ export default function GithubList() {
         fetchListRepo();
     }, [fetchListRepo]);
 
+    console.log(repos)
+
     return (
         <div>
             Github repos of user: {user}

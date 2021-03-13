@@ -6,18 +6,15 @@ import {
 } from "react-router-dom";
 import GithubList from "./containers/GithubList";
 import GithubDetail from "./containers/GithubDetail";
-import UserInput from "./containers/UserInput";
 import Header from "./Navigation";
+import './App.css'
 
 export default function App() {
   return (
     <Router>
-      <div>
+      <div className="Container">
         <Header />
         <Switch>
-          <Route path="/user_input">
-            <UserInput />
-          </Route>
           <Route path="/github_list/:user">
             <GithubList />
           </Route>
