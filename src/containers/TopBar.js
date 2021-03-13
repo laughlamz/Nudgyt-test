@@ -16,9 +16,9 @@ export default function TopBar() {
                         UDGYT
                     </div>
                 </div>
-                <div className="Info">
+                <a className="Info" href='https://www.nudgyt.com/' target="_blank" rel="noreferrer">
                     Home
-                </div>
+                </a>
             </div>
             <div className="WrapSearchBar">
                 <SearchBar />

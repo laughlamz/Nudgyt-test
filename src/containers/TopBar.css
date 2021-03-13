@@ -1,8 +1,8 @@
 .Header {
     height: 200px;
     background-color: #5C04F4;
-    padding-left: 35px;
-    padding-right: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
     color: white;
 }
 
@@ -26,6 +26,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: white;
+}
+
+.Signature, .Info:hover {
+    color: white;
+    text-decoration: none;
 }
 
 .Signature .Company {

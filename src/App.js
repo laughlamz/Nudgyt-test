@@ -14,7 +14,7 @@ export default function App() {
     <Router>
       <div className="Container">
         <TopBar />
-        <div style={{ marginTop: '30px', marginLeft: '35px', marginRight: '50px' }}>
+        <div className="Content">
           <Switch>
             <Route path="/github_list/:user">
               <GithubList />
